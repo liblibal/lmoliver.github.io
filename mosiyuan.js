@@ -2454,25 +2454,7 @@ Vue.component('model-alert',{
 			setInterval(loop);
 			this.$el.style.display='block';
 			document.getElementById('global').innerText='';
-			const maker=(obj)=>{
-				return {
-					get:()=>{
-						console.log(
-							`膜拜 %cS%ciyuan%c 要真诚!\n%chttps://orzsiyuan.com/`,
-							'color:black;font-weight:bold;',
-							'color:red;font-weight:bold;',
-							'',
-							'color:blue;',
-						);
-						clearTimeout(saveSave);
-						this.$set(this,'debugging',true);
-						setTimeout(()=>{
-							window.location.href='./SiyuanAK.png';
-						},5000);
-						return undefined;
-					},
-				};
-			};
+			
 			Object.defineProperty(window,'_',maker(this));
 		},
 	});
